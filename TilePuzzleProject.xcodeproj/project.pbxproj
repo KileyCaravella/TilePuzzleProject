@@ -1,0 +1,507 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AFD4D1E71D0F68BA00EBC7A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD4D1E61D0F68BA00EBC7A6 /* AppDelegate.swift */; };
+		AFD4D1E91D0F68BA00EBC7A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD4D1E81D0F68BA00EBC7A6 /* ViewController.swift */; };
+		AFD4D1EC1D0F68BA00EBC7A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFD4D1EA1D0F68BA00EBC7A6 /* Main.storyboard */; };
+		AFD4D1EE1D0F68BB00EBC7A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFD4D1ED1D0F68BB00EBC7A6 /* Assets.xcassets */; };
+		AFD4D1F11D0F68BB00EBC7A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFD4D1EF1D0F68BB00EBC7A6 /* LaunchScreen.storyboard */; };
+		AFD4D1FC1D0F68BB00EBC7A6 /* TilePuzzleProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD4D1FB1D0F68BB00EBC7A6 /* TilePuzzleProjectTests.swift */; };
+		AFD4D2071D0F68BB00EBC7A6 /* TilePuzzleProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD4D2061D0F68BB00EBC7A6 /* TilePuzzleProjectUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AFD4D1F81D0F68BB00EBC7A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AFD4D1DB1D0F68BA00EBC7A6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AFD4D1E21D0F68BA00EBC7A6;
+			remoteInfo = TilePuzzleProject;
+		};
+		AFD4D2031D0F68BB00EBC7A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AFD4D1DB1D0F68BA00EBC7A6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AFD4D1E21D0F68BA00EBC7A6;
+			remoteInfo = TilePuzzleProject;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AFD4D1E31D0F68BA00EBC7A6 /* TilePuzzleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TilePuzzleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFD4D1E61D0F68BA00EBC7A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AFD4D1E81D0F68BA00EBC7A6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AFD4D1EB1D0F68BA00EBC7A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AFD4D1ED1D0F68BB00EBC7A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AFD4D1F01D0F68BB00EBC7A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AFD4D1F21D0F68BB00EBC7A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFD4D1F71D0F68BB00EBC7A6 /* TilePuzzleProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TilePuzzleProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFD4D1FB1D0F68BB00EBC7A6 /* TilePuzzleProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TilePuzzleProjectTests.swift; sourceTree = "<group>"; };
+		AFD4D1FD1D0F68BB00EBC7A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFD4D2021D0F68BB00EBC7A6 /* TilePuzzleProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TilePuzzleProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFD4D2061D0F68BB00EBC7A6 /* TilePuzzleProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TilePuzzleProjectUITests.swift; sourceTree = "<group>"; };
+		AFD4D2081D0F68BB00EBC7A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AFD4D1E01D0F68BA00EBC7A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFD4D1F41D0F68BB00EBC7A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFD4D1FF1D0F68BB00EBC7A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AFD4D1DA1D0F68BA00EBC7A6 = {
+			isa = PBXGroup;
+			children = (
+				AFD4D1E51D0F68BA00EBC7A6 /* TilePuzzleProject */,
+				AFD4D1FA1D0F68BB00EBC7A6 /* TilePuzzleProjectTests */,
+				AFD4D2051D0F68BB00EBC7A6 /* TilePuzzleProjectUITests */,
+				AFD4D1E41D0F68BA00EBC7A6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AFD4D1E41D0F68BA00EBC7A6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AFD4D1E31D0F68BA00EBC7A6 /* TilePuzzleProject.app */,
+				AFD4D1F71D0F68BB00EBC7A6 /* TilePuzzleProjectTests.xctest */,
+				AFD4D2021D0F68BB00EBC7A6 /* TilePuzzleProjectUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AFD4D1E51D0F68BA00EBC7A6 /* TilePuzzleProject */ = {
+			isa = PBXGroup;
+			children = (
+				AFD4D1E61D0F68BA00EBC7A6 /* AppDelegate.swift */,
+				AFD4D1E81D0F68BA00EBC7A6 /* ViewController.swift */,
+				AFD4D1EA1D0F68BA00EBC7A6 /* Main.storyboard */,
+				AFD4D1ED1D0F68BB00EBC7A6 /* Assets.xcassets */,
+				AFD4D1EF1D0F68BB00EBC7A6 /* LaunchScreen.storyboard */,
+				AFD4D1F21D0F68BB00EBC7A6 /* Info.plist */,
+			);
+			path = TilePuzzleProject;
+			sourceTree = "<group>";
+		};
+		AFD4D1FA1D0F68BB00EBC7A6 /* TilePuzzleProjectTests */ = {
+			isa = PBXGroup;
+			children = (
+				AFD4D1FB1D0F68BB00EBC7A6 /* TilePuzzleProjectTests.swift */,
+				AFD4D1FD1D0F68BB00EBC7A6 /* Info.plist */,
+			);
+			path = TilePuzzleProjectTests;
+			sourceTree = "<group>";
+		};
+		AFD4D2051D0F68BB00EBC7A6 /* TilePuzzleProjectUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AFD4D2061D0F68BB00EBC7A6 /* TilePuzzleProjectUITests.swift */,
+				AFD4D2081D0F68BB00EBC7A6 /* Info.plist */,
+			);
+			path = TilePuzzleProjectUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AFD4D1E21D0F68BA00EBC7A6 /* TilePuzzleProject */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFD4D20B1D0F68BB00EBC7A6 /* Build configuration list for PBXNativeTarget "TilePuzzleProject" */;
+			buildPhases = (
+				AFD4D1DF1D0F68BA00EBC7A6 /* Sources */,
+				AFD4D1E01D0F68BA00EBC7A6 /* Frameworks */,
+				AFD4D1E11D0F68BA00EBC7A6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TilePuzzleProject;
+			productName = TilePuzzleProject;
+			productReference = AFD4D1E31D0F68BA00EBC7A6 /* TilePuzzleProject.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AFD4D1F61D0F68BB00EBC7A6 /* TilePuzzleProjectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFD4D20E1D0F68BB00EBC7A6 /* Build configuration list for PBXNativeTarget "TilePuzzleProjectTests" */;
+			buildPhases = (
+				AFD4D1F31D0F68BB00EBC7A6 /* Sources */,
+				AFD4D1F41D0F68BB00EBC7A6 /* Frameworks */,
+				AFD4D1F51D0F68BB00EBC7A6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AFD4D1F91D0F68BB00EBC7A6 /* PBXTargetDependency */,
+			);
+			name = TilePuzzleProjectTests;
+			productName = TilePuzzleProjectTests;
+			productReference = AFD4D1F71D0F68BB00EBC7A6 /* TilePuzzleProjectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AFD4D2011D0F68BB00EBC7A6 /* TilePuzzleProjectUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFD4D2111D0F68BB00EBC7A6 /* Build configuration list for PBXNativeTarget "TilePuzzleProjectUITests" */;
+			buildPhases = (
+				AFD4D1FE1D0F68BB00EBC7A6 /* Sources */,
+				AFD4D1FF1D0F68BB00EBC7A6 /* Frameworks */,
+				AFD4D2001D0F68BB00EBC7A6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AFD4D2041D0F68BB00EBC7A6 /* PBXTargetDependency */,
+			);
+			name = TilePuzzleProjectUITests;
+			productName = TilePuzzleProjectUITests;
+			productReference = AFD4D2021D0F68BB00EBC7A6 /* TilePuzzleProjectUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AFD4D1DB1D0F68BA00EBC7A6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Kiley Caravella";
+				TargetAttributes = {
+					AFD4D1E21D0F68BA00EBC7A6 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					AFD4D1F61D0F68BB00EBC7A6 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = AFD4D1E21D0F68BA00EBC7A6;
+					};
+					AFD4D2011D0F68BB00EBC7A6 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = AFD4D1E21D0F68BA00EBC7A6;
+					};
+				};
+			};
+			buildConfigurationList = AFD4D1DE1D0F68BA00EBC7A6 /* Build configuration list for PBXProject "TilePuzzleProject" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AFD4D1DA1D0F68BA00EBC7A6;
+			productRefGroup = AFD4D1E41D0F68BA00EBC7A6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AFD4D1E21D0F68BA00EBC7A6 /* TilePuzzleProject */,
+				AFD4D1F61D0F68BB00EBC7A6 /* TilePuzzleProjectTests */,
+				AFD4D2011D0F68BB00EBC7A6 /* TilePuzzleProjectUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AFD4D1E11D0F68BA00EBC7A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFD4D1F11D0F68BB00EBC7A6 /* LaunchScreen.storyboard in Resources */,
+				AFD4D1EE1D0F68BB00EBC7A6 /* Assets.xcassets in Resources */,
+				AFD4D1EC1D0F68BA00EBC7A6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFD4D1F51D0F68BB00EBC7A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFD4D2001D0F68BB00EBC7A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AFD4D1DF1D0F68BA00EBC7A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFD4D1E91D0F68BA00EBC7A6 /* ViewController.swift in Sources */,
+				AFD4D1E71D0F68BA00EBC7A6 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFD4D1F31D0F68BB00EBC7A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFD4D1FC1D0F68BB00EBC7A6 /* TilePuzzleProjectTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFD4D1FE1D0F68BB00EBC7A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFD4D2071D0F68BB00EBC7A6 /* TilePuzzleProjectUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AFD4D1F91D0F68BB00EBC7A6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AFD4D1E21D0F68BA00EBC7A6 /* TilePuzzleProject */;
+			targetProxy = AFD4D1F81D0F68BB00EBC7A6 /* PBXContainerItemProxy */;
+		};
+		AFD4D2041D0F68BB00EBC7A6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AFD4D1E21D0F68BA00EBC7A6 /* TilePuzzleProject */;
+			targetProxy = AFD4D2031D0F68BB00EBC7A6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AFD4D1EA1D0F68BA00EBC7A6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AFD4D1EB1D0F68BA00EBC7A6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AFD4D1EF1D0F68BB00EBC7A6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AFD4D1F01D0F68BB00EBC7A6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AFD4D2091D0F68BB00EBC7A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AFD4D20A1D0F68BB00EBC7A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AFD4D20C1D0F68BB00EBC7A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TilePuzzleProject/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = IntrepidPursuits.TilePuzzleProject;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AFD4D20D1D0F68BB00EBC7A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TilePuzzleProject/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = IntrepidPursuits.TilePuzzleProject;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		AFD4D20F1D0F68BB00EBC7A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TilePuzzleProjectTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = IntrepidPursuits.TilePuzzleProjectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TilePuzzleProject.app/TilePuzzleProject";
+			};
+			name = Debug;
+		};
+		AFD4D2101D0F68BB00EBC7A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TilePuzzleProjectTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = IntrepidPursuits.TilePuzzleProjectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TilePuzzleProject.app/TilePuzzleProject";
+			};
+			name = Release;
+		};
+		AFD4D2121D0F68BB00EBC7A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TilePuzzleProjectUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = IntrepidPursuits.TilePuzzleProjectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TilePuzzleProject;
+			};
+			name = Debug;
+		};
+		AFD4D2131D0F68BB00EBC7A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TilePuzzleProjectUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = IntrepidPursuits.TilePuzzleProjectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TilePuzzleProject;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AFD4D1DE1D0F68BA00EBC7A6 /* Build configuration list for PBXProject "TilePuzzleProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFD4D2091D0F68BB00EBC7A6 /* Debug */,
+				AFD4D20A1D0F68BB00EBC7A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFD4D20B1D0F68BB00EBC7A6 /* Build configuration list for PBXNativeTarget "TilePuzzleProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFD4D20C1D0F68BB00EBC7A6 /* Debug */,
+				AFD4D20D1D0F68BB00EBC7A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AFD4D20E1D0F68BB00EBC7A6 /* Build configuration list for PBXNativeTarget "TilePuzzleProjectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFD4D20F1D0F68BB00EBC7A6 /* Debug */,
+				AFD4D2101D0F68BB00EBC7A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AFD4D2111D0F68BB00EBC7A6 /* Build configuration list for PBXNativeTarget "TilePuzzleProjectUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFD4D2121D0F68BB00EBC7A6 /* Debug */,
+				AFD4D2131D0F68BB00EBC7A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AFD4D1DB1D0F68BA00EBC7A6 /* Project object */;
+}
