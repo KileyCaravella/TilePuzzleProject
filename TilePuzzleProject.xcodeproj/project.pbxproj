@@ -7,13 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF137B331D11CEDF0079DBA4 /* image1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF137B321D11CEDF0079DBA4 /* image1.jpg */; };
+		AF137B351D11CF9E0079DBA4 /* image2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF137B341D11CF9E0079DBA4 /* image2.jpg */; };
+		AF137B371D11CFDD0079DBA4 /* image3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF137B361D11CFDD0079DBA4 /* image3.jpg */; };
+		AF137B3A1D11D0980079DBA4 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF137B381D11D0980079DBA4 /* MenuViewController.swift */; };
+		AF137B3B1D11D0980079DBA4 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF137B391D11D0980079DBA4 /* MenuViewController.xib */; };
 		AFD4D1E71D0F68BA00EBC7A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD4D1E61D0F68BA00EBC7A6 /* AppDelegate.swift */; };
-		AFD4D1E91D0F68BA00EBC7A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD4D1E81D0F68BA00EBC7A6 /* ViewController.swift */; };
-		AFD4D1EC1D0F68BA00EBC7A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFD4D1EA1D0F68BA00EBC7A6 /* Main.storyboard */; };
 		AFD4D1EE1D0F68BB00EBC7A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFD4D1ED1D0F68BB00EBC7A6 /* Assets.xcassets */; };
 		AFD4D1F11D0F68BB00EBC7A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFD4D1EF1D0F68BB00EBC7A6 /* LaunchScreen.storyboard */; };
 		AFD4D1FC1D0F68BB00EBC7A6 /* TilePuzzleProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD4D1FB1D0F68BB00EBC7A6 /* TilePuzzleProjectTests.swift */; };
 		AFD4D2071D0F68BB00EBC7A6 /* TilePuzzleProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD4D2061D0F68BB00EBC7A6 /* TilePuzzleProjectUITests.swift */; };
+		AFD4D2161D0F68EC00EBC7A6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD4D2141D0F68EC00EBC7A6 /* MainViewController.swift */; };
+		AFD4D2171D0F68EC00EBC7A6 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFD4D2151D0F68EC00EBC7A6 /* MainViewController.xib */; };
+		AFD68A631D11D65C009F5527 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD68A621D11D65C009F5527 /* Tile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,10 +40,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF137B321D11CEDF0079DBA4 /* image1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image1.jpg; sourceTree = "<group>"; };
+		AF137B341D11CF9E0079DBA4 /* image2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image2.jpg; sourceTree = "<group>"; };
+		AF137B361D11CFDD0079DBA4 /* image3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image3.jpg; sourceTree = "<group>"; };
+		AF137B381D11D0980079DBA4 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		AF137B391D11D0980079DBA4 /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
 		AFD4D1E31D0F68BA00EBC7A6 /* TilePuzzleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TilePuzzleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFD4D1E61D0F68BA00EBC7A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AFD4D1E81D0F68BA00EBC7A6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AFD4D1EB1D0F68BA00EBC7A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AFD4D1ED1D0F68BB00EBC7A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFD4D1F01D0F68BB00EBC7A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AFD4D1F21D0F68BB00EBC7A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +56,9 @@
 		AFD4D2021D0F68BB00EBC7A6 /* TilePuzzleProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TilePuzzleProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFD4D2061D0F68BB00EBC7A6 /* TilePuzzleProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TilePuzzleProjectUITests.swift; sourceTree = "<group>"; };
 		AFD4D2081D0F68BB00EBC7A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFD4D2141D0F68EC00EBC7A6 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		AFD4D2151D0F68EC00EBC7A6 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		AFD68A621D11D65C009F5527 /* Tile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +86,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AFB592481D10A54C007AB1A9 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				AF137B321D11CEDF0079DBA4 /* image1.jpg */,
+				AF137B341D11CF9E0079DBA4 /* image2.jpg */,
+				AF137B361D11CFDD0079DBA4 /* image3.jpg */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		AFD4D1DA1D0F68BA00EBC7A6 = {
 			isa = PBXGroup;
 			children = (
@@ -97,12 +119,16 @@
 		AFD4D1E51D0F68BA00EBC7A6 /* TilePuzzleProject */ = {
 			isa = PBXGroup;
 			children = (
+				AFB592481D10A54C007AB1A9 /* Images */,
 				AFD4D1E61D0F68BA00EBC7A6 /* AppDelegate.swift */,
-				AFD4D1E81D0F68BA00EBC7A6 /* ViewController.swift */,
-				AFD4D1EA1D0F68BA00EBC7A6 /* Main.storyboard */,
 				AFD4D1ED1D0F68BB00EBC7A6 /* Assets.xcassets */,
-				AFD4D1EF1D0F68BB00EBC7A6 /* LaunchScreen.storyboard */,
 				AFD4D1F21D0F68BB00EBC7A6 /* Info.plist */,
+				AFD4D2141D0F68EC00EBC7A6 /* MainViewController.swift */,
+				AFD4D2151D0F68EC00EBC7A6 /* MainViewController.xib */,
+				AFD4D1EF1D0F68BB00EBC7A6 /* LaunchScreen.storyboard */,
+				AF137B381D11D0980079DBA4 /* MenuViewController.swift */,
+				AF137B391D11D0980079DBA4 /* MenuViewController.xib */,
+				AFD68A621D11D65C009F5527 /* Tile.swift */,
 			);
 			path = TilePuzzleProject;
 			sourceTree = "<group>";
@@ -230,8 +256,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFD4D1F11D0F68BB00EBC7A6 /* LaunchScreen.storyboard in Resources */,
+				AF137B351D11CF9E0079DBA4 /* image2.jpg in Resources */,
+				AF137B331D11CEDF0079DBA4 /* image1.jpg in Resources */,
+				AF137B371D11CFDD0079DBA4 /* image3.jpg in Resources */,
 				AFD4D1EE1D0F68BB00EBC7A6 /* Assets.xcassets in Resources */,
-				AFD4D1EC1D0F68BA00EBC7A6 /* Main.storyboard in Resources */,
+				AF137B3B1D11D0980079DBA4 /* MenuViewController.xib in Resources */,
+				AFD4D2171D0F68EC00EBC7A6 /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,8 +286,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFD4D1E91D0F68BA00EBC7A6 /* ViewController.swift in Sources */,
+				AFD4D2161D0F68EC00EBC7A6 /* MainViewController.swift in Sources */,
+				AF137B3A1D11D0980079DBA4 /* MenuViewController.swift in Sources */,
 				AFD4D1E71D0F68BA00EBC7A6 /* AppDelegate.swift in Sources */,
+				AFD68A631D11D65C009F5527 /* Tile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,14 +325,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		AFD4D1EA1D0F68BA00EBC7A6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AFD4D1EB1D0F68BA00EBC7A6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		AFD4D1EF1D0F68BB00EBC7A6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -484,6 +508,7 @@
 				AFD4D20D1D0F68BB00EBC7A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AFD4D20E1D0F68BB00EBC7A6 /* Build configuration list for PBXNativeTarget "TilePuzzleProjectTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +517,7 @@
 				AFD4D2101D0F68BB00EBC7A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AFD4D2111D0F68BB00EBC7A6 /* Build configuration list for PBXNativeTarget "TilePuzzleProjectUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +526,7 @@
 				AFD4D2131D0F68BB00EBC7A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

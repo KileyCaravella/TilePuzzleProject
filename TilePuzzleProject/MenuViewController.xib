@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuViewController" customModule="TilePuzzleProject" customModuleProvider="target">
+            <connections>
+                <outlet property="backBtn" destination="o3d-Lu-dtW" id="jAk-bD-4Ec"/>
+                <outlet property="background" destination="btV-yh-81O" id="57o-qH-RJQ"/>
+                <outlet property="innerView" destination="5Ih-qR-0Kx" id="JYg-rm-Rzo"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Ih-qR-0Kx" userLabel="innerView">
+                    <rect key="frame" x="152" y="212" width="296" height="175"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o3d-Lu-dtW">
+                            <rect key="frame" x="131" y="73" width="34" height="30"/>
+                            <state key="normal" title="Back"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="o3d-Lu-dtW" firstAttribute="centerX" secondItem="5Ih-qR-0Kx" secondAttribute="centerX" id="LZI-aW-Ltm"/>
+                        <constraint firstItem="o3d-Lu-dtW" firstAttribute="centerY" secondItem="5Ih-qR-0Kx" secondAttribute="centerY" id="ckb-d7-eFG"/>
+                        <constraint firstAttribute="width" secondItem="5Ih-qR-0Kx" secondAttribute="height" multiplier="1:1" constant="121" id="ywu-fE-S9v"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="btV-yh-81O">
+                    <rect key="frame" x="0.0" y="-8" width="600" height="600"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <constraints>
+                <constraint firstItem="btV-yh-81O" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="5DX-P0-dji"/>
+                <constraint firstItem="btV-yh-81O" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="-8" id="9mS-ca-zTa"/>
+                <constraint firstItem="5Ih-qR-0Kx" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="212" id="H32-ll-vXE"/>
+                <constraint firstItem="5Ih-qR-0Kx" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="c6F-I5-A5c"/>
+                <constraint firstItem="btV-yh-81O" firstAttribute="centerX" secondItem="5Ih-qR-0Kx" secondAttribute="centerX" id="jHF-hf-C5P"/>
+                <constraint firstItem="btV-yh-81O" firstAttribute="centerY" secondItem="5Ih-qR-0Kx" secondAttribute="centerY" constant="-7.5" id="qMK-qF-4bB"/>
+                <constraint firstItem="5Ih-qR-0Kx" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="wtl-g2-hnp"/>
+            </constraints>
+            <point key="canvasLocation" x="526" y="301"/>
+        </view>
+    </objects>
+</document>
