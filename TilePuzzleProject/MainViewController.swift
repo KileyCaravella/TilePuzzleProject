@@ -10,6 +10,7 @@ import UIKit
 
 public var clearBtn = UIButton()
 public var distanceBetweenBtns = 0.0
+public var level = 1
 
 class MainViewController: UIViewController, communicationControllerMenu {
     
@@ -23,14 +24,12 @@ class MainViewController: UIViewController, communicationControllerMenu {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tileView.layer.borderColor = UIColor.blackColor().CGColor
         tileView.layer.borderWidth = 2
         menuBtn.addTarget(self, action: #selector(callMenuModal), forControlEvents: .TouchUpInside)
     }
     
     override func viewDidAppear(animated: Bool) {
-        createTiles(4)
-//        randomizeBtnLocation()
+
     }
     
     func callMenuModal() {
@@ -57,7 +56,9 @@ class MainViewController: UIViewController, communicationControllerMenu {
             
             tileView.addSubview(btn)
             tileArray.append(btn)
+            print(tileArray.count)
         }
+        randomizeBtnLocation()
     }
     
     func btnWasPressed(sender: Tile) {
@@ -113,6 +114,12 @@ class MainViewController: UIViewController, communicationControllerMenu {
     
     func backFromMenu() {
         self.dismissViewControllerAnimated(true, completion: nil)
+        tileView.layer.borderColor = UIColor.blackColor().CGColor
+        for btn in tileArray {
+            btn.removeFromSuperview()
+        }
+        tileArray.removeAll()
+        createTiles(level)
     }
     
 }
