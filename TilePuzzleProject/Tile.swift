@@ -10,7 +10,6 @@ import UIKit
 
 class Tile: UIButton {
     
-    
     func setupBtn (sizeOfBtn: Double, level: Int, iValue: Int) {
         
         //var x
@@ -39,23 +38,22 @@ class Tile: UIButton {
         if(!imgBtnBool) {
             self.layer.borderColor = UIColor.clearColor().CGColor
             self.backgroundColor = .clearColor()
-            self.setTitle("", forState: .Normal)
-        } else {
-            self.titleLabel?.textColor = .clearColor()
         }
+        self.titleLabel?.textColor = .clearColor()
     }
     
-    func btnWasPressed() {
+    func btnWasPressed() -> Bool{
         if (self.titleLabel!.text == "") {
-            return
+            return false
         }
-        if(compareBtns(self.frame.origin.x, clearX: clearBtn.frame.origin.x,
-            senderY: self.frame.origin.y, clearY: clearBtn.frame.origin.y)) {
+        if(compareBtns(self.frame.origin.x, senderY: self.frame.origin.y)) {
             
             UIView.animateWithDuration(0.5, animations: {
                 self.moveBtn()
             })
+            return true
         }
+        return false
     }
     
     func moveBtn() {
@@ -67,13 +65,15 @@ class Tile: UIButton {
         clearBtn.frame.origin.y = holdValueY
     }
     
-    func compareBtns(senderX: CGFloat, clearX: CGFloat, senderY: CGFloat, clearY: CGFloat) -> Bool {
-        if (senderX == clearX) {
-            if (senderY + CGFloat(distanceBetweenBtns) == clearY || senderY - CGFloat(distanceBetweenBtns) == clearY) {
+    func compareBtns(senderX: CGFloat, senderY: CGFloat) -> Bool {
+        let clearX = clearBtn.frame.origin.x
+        let clearY = clearBtn.frame.origin.y
+        if (senderX == clearBtn.frame.origin.x) {
+            if (senderY + CGFloat(clearBtn.frame.size.width) == clearY || senderY - CGFloat(clearBtn.frame.size.width) == clearY) {
                 return true
             }
         } else if (senderY == clearY) {
-            if (senderX + CGFloat(distanceBetweenBtns) == clearX || senderX - CGFloat(distanceBetweenBtns) == clearX) {
+            if (senderX + CGFloat(clearBtn.frame.size.width) == clearX || senderX - CGFloat(clearBtn.frame.size.width) == clearX) {
                 return true
             }
         }

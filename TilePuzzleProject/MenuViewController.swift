@@ -9,7 +9,7 @@
 import UIKit
 
 protocol communicationControllerMenu {
-    func backFromMenu()
+    func backFromMenu(level: Int, img: UIImage)
 }
 
 
@@ -19,12 +19,23 @@ class MenuViewController: UIViewController {
     @IBOutlet weak var innerView: UIView!
     @IBOutlet weak var innerViewColorLbl: UILabel!
     @IBOutlet weak var background: UILabel!
-    @IBOutlet weak var backBtn: UIButton!
+    @IBOutlet weak var img1Btn: UIButton!
+    @IBOutlet weak var img2Btn: UIButton!
+    @IBOutlet weak var img3Btn: UIButton!
     @IBOutlet weak var lvlDifficultySegCntrl: UISegmentedControl!
+    @IBOutlet weak var playBtn: UIButton!
+    
+    var img = UIImage(named: "image1.jpg")
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        backBtn.addTarget(self, action: #selector(goBackToMainVC), forControlEvents: .TouchUpInside)
+        playBtn.addTarget(self, action: #selector(goBackToMainVC), forControlEvents: .TouchUpInside)
+        img1Btn.addTarget(self, action: #selector(choosePicforTiles), forControlEvents: .TouchUpInside)
+        img2Btn.addTarget(self, action: #selector(choosePicforTiles), forControlEvents: .TouchUpInside)
+        img3Btn.addTarget(self, action: #selector(choosePicforTiles), forControlEvents: .TouchUpInside)
+
+
         setupInnerView()
         view.sendSubviewToBack(background)
         view.alpha = 0
@@ -50,9 +61,24 @@ class MenuViewController: UIViewController {
         innerView.layer.borderWidth = 6
     }
     
+    func choosePicforTiles(sender: UIButton) {
+        img1Btn.highlighted = false
+        img2Btn.highlighted = false
+        img3Btn.highlighted = false
+        
+        dispatch_async(dispatch_get_main_queue(), {
+            sender.highlighted = true
+        })
+        
+        
+        img = sender.currentBackgroundImage
+    }
+    
     func goBackToMainVC() {
        
         //Case to figure out level
+        var level = 0
+
         switch self.lvlDifficultySegCntrl.selectedSegmentIndex {
         case 0:
             level = 3
@@ -63,11 +89,13 @@ class MenuViewController: UIViewController {
         default:
             print("failed at clicking button")
         }
+        
+        
                 
         UIView.animateWithDuration(1, animations: {
             self.view.alpha = 0
             }, completion: { finished in
-                self.delegate?.backFromMenu()
+                self.delegate?.backFromMenu(level, img: self.img!)
         })
     }
 

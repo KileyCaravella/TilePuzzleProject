@@ -3,8 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -13,6 +11,7 @@
             <connections>
                 <outlet property="menuBtn" destination="7Nd-1O-6Ri" id="aZT-yd-XGh"/>
                 <outlet property="movesLbl" destination="BVb-5V-6Ph" id="JTg-G8-01c"/>
+                <outlet property="previewBtn" destination="Hwq-Sc-Mro" id="jzS-3e-EZO"/>
                 <outlet property="tileView" destination="dUL-M7-4vK" id="e21-pW-xKI"/>
                 <outlet property="view" destination="JJt-vB-NHS" id="P8Q-KP-oTp"/>
             </connections>
@@ -30,9 +29,21 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Nd-1O-6Ri" userLabel="menuLbl">
-                    <rect key="frame" x="529" y="560" width="63" height="36"/>
+                    <rect key="frame" x="269" y="560" width="63" height="36"/>
                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                     <state key="normal" title=" Menu ">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hwq-Sc-Mro" userLabel="menuLbl">
+                    <rect key="frame" x="517" y="560" width="75" height="36"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                    <state key="normal" title="Preview">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <userDefinedRuntimeAttributes>
@@ -48,29 +59,30 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dUL-M7-4vK" userLabel="tileView">
-                    <rect key="frame" x="152" y="152" width="296" height="296"/>
+                    <rect key="frame" x="10" y="10" width="580" height="580"/>
                     <color key="backgroundColor" red="0.97227032230640986" green="0.97920274172980748" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="dUL-M7-4vK" secondAttribute="height" multiplier="1:1" id="zUp-Wh-CqJ"/>
+                        <constraint firstAttribute="width" secondItem="dUL-M7-4vK" secondAttribute="height" multiplier="1:1" id="bnR-Lx-vNv"/>
                     </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="7Nd-1O-6Ri" secondAttribute="bottom" constant="4" id="0VT-fk-fHH"/>
-                <constraint firstItem="dUL-M7-4vK" firstAttribute="top" secondItem="JJt-vB-NHS" secondAttribute="top" constant="152" id="10b-oz-Y1G"/>
-                <constraint firstItem="ehC-pC-EMk" firstAttribute="centerY" secondItem="BVb-5V-6Ph" secondAttribute="centerY" id="3RX-Om-W66"/>
-                <constraint firstItem="BVb-5V-6Ph" firstAttribute="baseline" secondItem="7Nd-1O-6Ri" secondAttribute="firstBaseline" id="Ruc-XN-8iE"/>
-                <constraint firstItem="dUL-M7-4vK" firstAttribute="centerY" secondItem="JJt-vB-NHS" secondAttribute="centerY" id="URh-E9-GXh"/>
-                <constraint firstItem="dUL-M7-4vK" firstAttribute="centerX" secondItem="ehC-pC-EMk" secondAttribute="centerX" id="Uqd-pc-jel"/>
-                <constraint firstItem="ehC-pC-EMk" firstAttribute="leading" secondItem="JJt-vB-NHS" secondAttribute="leading" id="ai7-cV-Eay"/>
-                <constraint firstAttribute="trailing" secondItem="ehC-pC-EMk" secondAttribute="trailing" id="ehT-M4-urH"/>
-                <constraint firstAttribute="bottom" secondItem="ehC-pC-EMk" secondAttribute="bottom" id="ixW-zM-bxw"/>
-                <constraint firstItem="7Nd-1O-6Ri" firstAttribute="trailing" secondItem="JJt-vB-NHS" secondAttribute="trailingMargin" id="knK-Ly-BHp"/>
-                <constraint firstItem="BVb-5V-6Ph" firstAttribute="baseline" secondItem="7Nd-1O-6Ri" secondAttribute="baseline" id="pBh-Db-P3p"/>
-                <constraint firstItem="BVb-5V-6Ph" firstAttribute="leading" secondItem="JJt-vB-NHS" secondAttribute="leadingMargin" id="si5-Ua-aSs"/>
+                <constraint firstItem="Hwq-Sc-Mro" firstAttribute="centerY" secondItem="ehC-pC-EMk" secondAttribute="centerY" id="3Cd-aY-6jY"/>
+                <constraint firstItem="dUL-M7-4vK" firstAttribute="centerY" secondItem="JJt-vB-NHS" secondAttribute="centerY" id="9D3-ZJ-rqH"/>
+                <constraint firstItem="BVb-5V-6Ph" firstAttribute="leading" secondItem="JJt-vB-NHS" secondAttribute="leadingMargin" id="Ddl-56-eaL"/>
+                <constraint firstItem="dUL-M7-4vK" firstAttribute="centerX" secondItem="7Nd-1O-6Ri" secondAttribute="centerX" id="Gad-2H-qrE"/>
+                <constraint firstItem="ehC-pC-EMk" firstAttribute="leading" secondItem="JJt-vB-NHS" secondAttribute="leading" id="Jmq-wz-8GQ"/>
+                <constraint firstAttribute="bottom" secondItem="Hwq-Sc-Mro" secondAttribute="bottom" constant="4" id="KoQ-YR-4bv"/>
+                <constraint firstItem="Hwq-Sc-Mro" firstAttribute="baseline" secondItem="7Nd-1O-6Ri" secondAttribute="baseline" id="Ofe-be-zHY"/>
+                <constraint firstAttribute="bottom" secondItem="ehC-pC-EMk" secondAttribute="bottom" id="UUo-tY-7pZ"/>
+                <constraint firstItem="Hwq-Sc-Mro" firstAttribute="trailing" secondItem="JJt-vB-NHS" secondAttribute="trailingMargin" id="fA5-T5-psD"/>
+                <constraint firstItem="dUL-M7-4vK" firstAttribute="leading" secondItem="JJt-vB-NHS" secondAttribute="leading" constant="10" id="l5h-dP-n0S"/>
+                <constraint firstAttribute="trailing" secondItem="dUL-M7-4vK" secondAttribute="trailing" constant="10" id="lqz-BZ-oRs"/>
+                <constraint firstItem="Hwq-Sc-Mro" firstAttribute="baseline" secondItem="BVb-5V-6Ph" secondAttribute="baseline" id="m2B-wY-CgG"/>
+                <constraint firstItem="dUL-M7-4vK" firstAttribute="centerX" secondItem="ehC-pC-EMk" secondAttribute="centerX" id="yBJ-3K-ZDy"/>
             </constraints>
-            <point key="canvasLocation" x="434" y="650"/>
+            <point key="canvasLocation" x="555" y="598"/>
         </view>
     </objects>
 </document>

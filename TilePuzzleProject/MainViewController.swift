@@ -9,16 +9,14 @@
 import UIKit
 
 public var clearBtn = UIButton()
-public var distanceBetweenBtns = 0.0
-public var level = 1
 public var baseImg = UIImage(named: "image3.jpg")
-
 
 class MainViewController: UIViewController, communicationControllerMenu {
     
     @IBOutlet weak var movesLbl: UILabel!
     @IBOutlet weak var tileView: UIView!
     @IBOutlet weak var menuBtn: UIButton!
+    @IBOutlet weak var previewBtn: UIButton!
     
     var tileArray: [Tile] = []
     var numMoves = 0
@@ -27,9 +25,7 @@ class MainViewController: UIViewController, communicationControllerMenu {
         super.viewDidLoad()
         tileView.layer.borderWidth = 2
         menuBtn.addTarget(self, action: #selector(callMenuModal), forControlEvents: .TouchUpInside)
-    }
-    
-    override func viewDidAppear(animated: Bool) {
+        previewBtn.addTarget(self, action: #selector(previewImg), forControlEvents: .TouchUpInside)
 
     }
     
@@ -40,68 +36,107 @@ class MainViewController: UIViewController, communicationControllerMenu {
         presentViewController(menuVC, animated: false, completion: nil)
     }
     
-    func createTiles(level: Int) {
+    func previewImg() {
+        let imgView = UIImageView(frame: CGRectMake(0, 0, tileView.bounds.width, tileView.bounds.height))
+        imgView.image = baseImg
+        imgView.alpha = 0
+        self.tileView.addSubview(imgView)
+        self.tileView.sendSubviewToBack(imgView)
+        
+        self.tileView.clipsToBounds = true
+        UIView.animateWithDuration(1, animations: {
+            for btn in self.tileArray {
+                btn.alpha = 0
+            }
+            imgView.alpha = 1
+
+            }, completion: {finished in
+                sleep(2)
+                UIView.animateWithDuration(1, animations: {
+                    for btn in self.tileArray {
+                        if(btn != clearBtn) {
+                            btn.alpha = 1
+                        }
+                        imgView.alpha = 0
+                    }
+
+                    }, completion: { finished in
+                        imgView.removeFromSuperview()
+                })
+        })
+        
+    }
+
+    func createTiles(level: Int, img: UIImage) {
         for  i in 0  ..< (level*level) {
-            distanceBetweenBtns = Double(tileView.frame.size.width)/Double(level)
+            let distanceBetweenBtns = Double(tileView.frame.size.width)/Double(level)
             let btn = Tile()
             btn.setupBtn(distanceBetweenBtns, level: level, iValue: i)
             btn.addTarget(self, action: #selector(btnWasPressed), forControlEvents: .TouchUpInside)
             
             if(i == (level*level)-1) {
                 btn.imgOrBlackBtn(false)
+                btn.alpha = 0
                 clearBtn = btn
             } else {
                 btn.imgOrBlackBtn(true)
-                btn.insertImg(baseImg!, view: tileView)
             }
             
+            btn.insertImg(img, view: tileView)
             tileView.addSubview(btn)
             tileArray.append(btn)
-            print(tileArray.count)
         }
         randomizeBtnLocation()
     }
     
     func btnWasPressed(sender: Tile) {
-        numMoves += 1
-        movesLbl.text = "Moves: " + String(numMoves)
-        sender.btnWasPressed()
+        if(sender.btnWasPressed()) {
+            numMoves += 1
+            movesLbl.text = "Moves: " + String(numMoves)
+        }
         checkSolution()
     }
     
     func randomizeBtnLocation() {
-        let randomNumOfShuffles = Int(arc4random_uniform(1000))
+        let randomNumOfShuffles = Int(arc4random_uniform(40)+80)
         var lastRoundBtn = tileArray[0]
+        var bool = false
         for _ in 0...randomNumOfShuffles {
-            let btn = tileArray[Int(arc4random_uniform(UInt32(tileArray.count - 1)))]
-            
-            //Shuffles with a different btn each time
-            if (btn == lastRoundBtn) {}
-            else if (btn.compareBtns(clearBtn.frame.origin.x, clearX: btn.frame.origin.x,
-                senderY: clearBtn.frame.origin.y, clearY: btn.frame.origin.y)) {
-                
-                btn.moveBtn()
-                
-                //Switch array values
-                let arrayValueBtn = getArrayValue(btn)
-                let arrayValueFirstBtn = getArrayValue(clearBtn)
-                
-                swap(&tileArray[arrayValueBtn], &tileArray[arrayValueFirstBtn])
-                lastRoundBtn = clearBtn as! Tile
+            for btn in tileArray {
+                if (!bool) {
+                    bool = true
+                    break
+                }
+                if (btn == lastRoundBtn) {}
+                else if (btn.compareBtns(clearBtn.frame.origin.x, senderY: btn.frame.origin.y)) {
+                    
+                    btn.moveBtn()
+                    
+                    //Switch array values
+                    let arrayValueBtn = getArrayValue(btn)
+                    let arrayValueFirstBtn = getArrayValue(clearBtn)
+                    
+                    swap(&tileArray[arrayValueBtn], &tileArray[arrayValueFirstBtn])
+                    lastRoundBtn = btn
+                    bool = false
+                    break
+                }
             }
         }
     }
     
     func checkSolution() {
-        for i in 0...tileArray.count-3 {
-            if(tileArray[i] == clearBtn || tileArray[i+1] == clearBtn) {
-                return
-            } else if(Int(tileArray[i].titleLabel!.text!)! != Int(tileArray[i+1].titleLabel!.text!)! - 1) {
+        //redo this code
+        for i in 1...(self.tileArray.count-1) {
+            if(Int(self.tileArray[i].titleLabel!.text!)! != Int(self.tileArray[i-1].titleLabel!.text!)!+1) {
                 return
             }
         }
         
         print("winner!")
+
+        
+        
     }
     
     func getArrayValue(item: UIButton) -> Int{
@@ -113,44 +148,15 @@ class MainViewController: UIViewController, communicationControllerMenu {
         return 0
     }
     
-    func backFromMenu() {
+    func backFromMenu(level: Int, img: UIImage) {
         self.dismissViewControllerAnimated(true, completion: nil)
         tileView.layer.borderColor = UIColor.blackColor().CGColor
         for btn in tileArray {
             btn.removeFromSuperview()
         }
+        self.tileView.backgroundColor = .blackColor()
         tileArray.removeAll()
-        createTiles(level)
+        createTiles(level, img: img)
+        baseImg = img
     }
-    
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
