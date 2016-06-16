@@ -11,6 +11,8 @@ import UIKit
 public var clearBtn = UIButton()
 public var distanceBetweenBtns = 0.0
 public var level = 1
+public var baseImg = UIImage(named: "image3.jpg")
+
 
 class MainViewController: UIViewController, communicationControllerMenu {
     
@@ -20,7 +22,6 @@ class MainViewController: UIViewController, communicationControllerMenu {
     
     var tileArray: [Tile] = []
     var numMoves = 0
-    var baseImg = UIImage(named: "image3.jpg")
     
     override func viewDidLoad() {
         super.viewDidLoad()
