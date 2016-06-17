@@ -20,6 +20,7 @@ class MainViewController: UIViewController, communicationControllerMenu {
     
     var tileArray: [Tile] = []
     var numMoves = 0
+    var level = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,8 +77,8 @@ class MainViewController: UIViewController, communicationControllerMenu {
             
             if(i == (level*level)-1) {
                 btn.imgOrBlackBtn(false)
-                btn.alpha = 0
                 clearBtn = btn
+                clearBtn.alpha = 0
             } else {
                 btn.imgOrBlackBtn(true)
             }
@@ -98,30 +99,40 @@ class MainViewController: UIViewController, communicationControllerMenu {
     }
     
     func randomizeBtnLocation() {
-        let randomNumOfShuffles = Int(arc4random_uniform(40)+80)
-        var lastRoundBtn = tileArray[0]
-        var bool = false
-        for _ in 0...randomNumOfShuffles {
-            for btn in tileArray {
-                if (!bool) {
-                    bool = true
-                    break
-                }
-                if (btn == lastRoundBtn) {}
-                else if (btn.compareBtns(clearBtn.frame.origin.x, senderY: btn.frame.origin.y)) {
-                    
-                    btn.moveBtn()
-                    
-                    //Switch array values
-                    let arrayValueBtn = getArrayValue(btn)
-                    let arrayValueFirstBtn = getArrayValue(clearBtn)
-                    
-                    swap(&tileArray[arrayValueBtn], &tileArray[arrayValueFirstBtn])
-                    lastRoundBtn = btn
-                    bool = false
-                    break
+        let rndmNumOfShuffles = Int(arc4random_uniform(40)+60)
+        var arrayAroundClearBtn: [Tile] = []
+        var lastRoundBtn = self.tileArray[0]
+        for _ in 0...rndmNumOfShuffles {
+            for btn in self.tileArray {
+                if (btn.compareBtns(btn.frame.origin.x, senderY: btn.frame.origin.y)) {
+                    arrayAroundClearBtn.append(btn)
                 }
             }
+            
+            let rndmChosen = Int(arc4random_uniform(UInt32(arrayAroundClearBtn.count)))
+            if (lastRoundBtn != arrayAroundClearBtn[rndmChosen]) {
+                arrayAroundClearBtn[rndmChosen].moveBtn()
+                lastRoundBtn = arrayAroundClearBtn[rndmChosen]
+                arrayAroundClearBtn.removeAll()
+            }
+            arrayAroundClearBtn.removeAll()
+//
+//            for btn in self.tileArray {
+//
+//                if (btn == lastRoundBtn) {}
+//                else if (btn.compareBtns(btn.frame.origin.x, senderY: btn.frame.origin.y)) {
+//                    
+//                    btn.moveBtn()
+//                    
+//                    //Switch array values
+//                    let arrayValueBtn = getArrayValue(btn)
+//                    let arrayValueFirstBtn = getArrayValue(clearBtn)
+//                    
+//                    swap(&self.tileArray[arrayValueBtn], &self.tileArray[arrayValueFirstBtn])
+//                    lastRoundBtn = btn
+//                    break
+//                }
+//            }
         }
     }
     
@@ -148,7 +159,7 @@ class MainViewController: UIViewController, communicationControllerMenu {
         return 0
     }
     
-    func backFromMenu(level: Int, img: UIImage) {
+    func backFromMenu(lvl: Int, img: UIImage) {
         self.dismissViewControllerAnimated(true, completion: nil)
         tileView.layer.borderColor = UIColor.blackColor().CGColor
         for btn in tileArray {
@@ -156,7 +167,8 @@ class MainViewController: UIViewController, communicationControllerMenu {
         }
         self.tileView.backgroundColor = .blackColor()
         tileArray.removeAll()
-        createTiles(level, img: img)
+        createTiles(lvl, img: img)
+        level = lvl
         baseImg = img
     }
 }

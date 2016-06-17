@@ -10,7 +10,9 @@ import UIKit
 
 class Tile: UIButton {
     
+    var levelBtn = 0
     func setupBtn (sizeOfBtn: Double, level: Int, iValue: Int) {
+        levelBtn = level
         
         //var x
         var x = Double((iValue%level))
@@ -46,6 +48,7 @@ class Tile: UIButton {
         if (self.titleLabel!.text == "") {
             return false
         }
+        
         if(compareBtns(self.frame.origin.x, senderY: self.frame.origin.y)) {
             
             UIView.animateWithDuration(0.5, animations: {
@@ -66,17 +69,38 @@ class Tile: UIButton {
     }
     
     func compareBtns(senderX: CGFloat, senderY: CGFloat) -> Bool {
-        let clearX = clearBtn.frame.origin.x
-        let clearY = clearBtn.frame.origin.y
-        if (senderX == clearBtn.frame.origin.x) {
-            if (senderY + CGFloat(clearBtn.frame.size.width) == clearY || senderY - CGFloat(clearBtn.frame.size.width) == clearY) {
-                return true
+       
+        //Because of rounding errors, the x and y of the btns will never equal the clearBtn (number.3333 + number.3333 != number.6667 <----**
+        //To help, when the level is divisible by 3, the values are changed to integers.         
+        if (levelBtn%3 == 0) {
+            let senderXInt = Int(senderX)
+            let senderYInt = Int(senderY)
+            let clearX = Int(clearBtn.frame.origin.x)
+            let clearY = Int(clearBtn.frame.origin.y)
+            if (senderXInt == clearX) {
+                if (senderYInt + Int(clearBtn.frame.size.width) == clearY || senderYInt - Int(clearBtn.frame.size.width) == clearY) {
+                    return true
+                }
+            } else if (senderYInt == clearY) {
+                if (senderXInt + Int(clearBtn.frame.size.width) == clearX || senderXInt - Int(clearBtn.frame.size.width) == clearX) {
+                    return true
+                }
             }
-        } else if (senderY == clearY) {
-            if (senderX + CGFloat(clearBtn.frame.size.width) == clearX || senderX - CGFloat(clearBtn.frame.size.width) == clearX) {
-                return true
+
+        } else {
+            let clearX = clearBtn.frame.origin.x
+            let clearY = clearBtn.frame.origin.y
+            if (senderX == clearX) {
+                if (senderY + clearBtn.frame.size.width == clearY || senderY - clearBtn.frame.size.width == clearY) {
+                    return true
+                }
+            } else if (senderY == clearY) {
+                if (senderX + clearBtn.frame.size.width == clearX || senderX - clearBtn.frame.size.width == clearX) {
+                    return true
+                }
             }
         }
+        
         return false
     }
 }
