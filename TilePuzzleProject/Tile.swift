@@ -70,7 +70,7 @@ class Tile: UIButton {
     
     func compareBtns(senderX: CGFloat, senderY: CGFloat) -> Bool {
        
-        //Because of rounding errors, the x and y of the btns will never equal the clearBtn (number.3333 + number.3333 != number.6667 <----**
+        //Because of rounding errors, the x and y of the btns will never equal the clearBtn (Int.3333 + Int.3333 != Int.6667 <----**
         //To help, when the level is divisible by 3, the values are changed to integers.         
         if (levelBtn%3 == 0) {
             let senderXInt = Int(senderX)

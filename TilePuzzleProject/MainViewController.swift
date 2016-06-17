@@ -95,6 +95,10 @@ class MainViewController: UIViewController, communicationControllerMenu {
             numMoves += 1
             movesLbl.text = "Moves: " + String(numMoves)
         }
+        let arrayValueBtn = getArrayValue(sender)
+        let arrayValueClear = getArrayValue(clearBtn)
+        
+        swap(&tileArray[arrayValueBtn], &tileArray[arrayValueClear])
         checkSolution()
     }
     
@@ -112,33 +116,23 @@ class MainViewController: UIViewController, communicationControllerMenu {
             let rndmChosen = Int(arc4random_uniform(UInt32(arrayAroundClearBtn.count)))
             if (lastRoundBtn != arrayAroundClearBtn[rndmChosen]) {
                 arrayAroundClearBtn[rndmChosen].moveBtn()
+                
+                let arrayValueBtn = getArrayValue(arrayAroundClearBtn[rndmChosen])
+                let arrayValueClear = getArrayValue(clearBtn)
+                
+                swap(&tileArray[arrayValueBtn], &tileArray[arrayValueClear])
+                
                 lastRoundBtn = arrayAroundClearBtn[rndmChosen]
                 arrayAroundClearBtn.removeAll()
             }
             arrayAroundClearBtn.removeAll()
-//
-//            for btn in self.tileArray {
-//
-//                if (btn == lastRoundBtn) {}
-//                else if (btn.compareBtns(btn.frame.origin.x, senderY: btn.frame.origin.y)) {
-//                    
-//                    btn.moveBtn()
-//                    
-//                    //Switch array values
-//                    let arrayValueBtn = getArrayValue(btn)
-//                    let arrayValueFirstBtn = getArrayValue(clearBtn)
-//                    
-//                    swap(&self.tileArray[arrayValueBtn], &self.tileArray[arrayValueFirstBtn])
-//                    lastRoundBtn = btn
-//                    break
-//                }
-//            }
         }
     }
     
     func checkSolution() {
         //redo this code
         for i in 1...(self.tileArray.count-1) {
+            print(self.tileArray[i].titleLabel!.text!)
             if(Int(self.tileArray[i].titleLabel!.text!)! != Int(self.tileArray[i-1].titleLabel!.text!)!+1) {
                 return
             }
