@@ -132,16 +132,31 @@ class MainViewController: UIViewController, communicationControllerMenu {
     func checkSolution() {
         //redo this code
         for i in 1...(self.tileArray.count-1) {
-            print(self.tileArray[i].titleLabel!.text!)
             if(Int(self.tileArray[i].titleLabel!.text!)! != Int(self.tileArray[i-1].titleLabel!.text!)!+1) {
                 return
             }
         }
         
         print("winner!")
-
+        wonGame()
         
         
+    }
+    
+    func wonGame() {
+        let imgView = UIImageView(frame: CGRectMake(0, 0, tileView.bounds.width, tileView.bounds.height))
+        imgView.image = baseImg
+        imgView.alpha = 0
+        self.tileView.addSubview(imgView)
+        self.tileView.sendSubviewToBack(imgView)
+        
+        self.tileView.clipsToBounds = true
+        UIView.animateWithDuration(1, animations: {
+            for btn in self.tileArray {
+                btn.alpha = 0
+            }
+            imgView.alpha = 1
+        })
     }
     
     func getArrayValue(item: UIButton) -> Int{
@@ -155,6 +170,15 @@ class MainViewController: UIViewController, communicationControllerMenu {
     
     func backFromMenu(lvl: Int, img: UIImage) {
         self.dismissViewControllerAnimated(true, completion: nil)
+        
+        for view in tileView.subviews{
+            if let str = view as? UIImageView {
+                view.alpha = 0
+                view.removeFromSuperview()
+                str.image = baseImg
+            }
+        }
+        
         tileView.layer.borderColor = UIColor.blackColor().CGColor
         for btn in tileArray {
             btn.removeFromSuperview()
