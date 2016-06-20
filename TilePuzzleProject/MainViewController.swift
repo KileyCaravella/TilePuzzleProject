@@ -179,6 +179,9 @@ class MainViewController: UIViewController, communicationControllerMenu {
             }
         }
         
+        numMoves = 0
+        movesLbl.text = "Moves: " + String(numMoves)
+        
         tileView.layer.borderColor = UIColor.blackColor().CGColor
         for btn in tileArray {
             btn.removeFromSuperview()
