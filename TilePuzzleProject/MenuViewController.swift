@@ -86,6 +86,8 @@ class MenuViewController: UIViewController {
             level = 4
         case 2:
             level = 5
+        case 3:
+            level = 6
         default:
             print("failed at clicking button")
         }
